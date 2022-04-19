@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bubble_Pet_xForce_2022">
         <activity
+            android:name=".Data_Pet"
+            android:exported="false" />
+        <activity
             android:name=".PeopleLogin"
             android:exported="false" />
         <activity

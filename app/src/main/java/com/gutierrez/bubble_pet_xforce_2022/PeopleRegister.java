@@ -18,5 +18,11 @@ Button btn;
             Intent ok = new Intent(getApplicationContext(), Login.class);
             startActivity(ok);
         });
+
+        btn = findViewById(R.id.btnSiguiente);
+        btn.setOnClickListener(v ->{
+            Intent go = new Intent(getApplicationContext(), Data_Pet.class);
+            startActivity(go);
+        });
     }
 }
