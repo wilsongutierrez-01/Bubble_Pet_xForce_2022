@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetProfile">
+
+    <EditText
+        android:id="@+id/txtNamePet0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de Mascota"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/txtAge0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:textAlignment="center"
+        android:layout_below="@+id/txtNamePet0"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/txtColor0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Color"
+        android:textAlignment="center"
+        android:layout_below="@+id/txtAge0"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/txtRaza0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Raza"
+        android:textAlignment="center"
+        android:layout_below="@+id/txtColor0"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/txtSalud0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Estado de Salud"
+        android:textAlignment="center"
+        android:layout_below="@+id/txtRaza0"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/txtCel0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero del dueño"
+        android:textAlignment="center"
+        android:layout_below="@+id/txtSalud0"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

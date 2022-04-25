@@ -7,29 +7,11 @@
     android:background="#eeeeee"
     tools:context=".Data_Pet">
 
-    <ImageView
-        android:id="@+id/imgDog"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/ic_dogpie"/>
-
-    <Button
-        android:id="@+id/btnSelectImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seleccione Imagen"
-        android:layout_below="@+id/imgDog"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
-
     <RelativeLayout
         android:id="@+id/frameData"
         android:layout_width="300dp"
         android:layout_height="400dp"
-        android:layout_below="@+id/btnSelectImage"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true">
 
         <EditText
@@ -76,7 +58,7 @@
             android:layout_marginTop="10dp"/>
 
         <EditText
-            android:id="@+id/txtDueñoCel"
+            android:id="@+id/txtCel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Numero del dueño"
@@ -95,12 +77,12 @@
         android:drawableLeft="@drawable/ic_back"/>
 
     <Button
-        android:id="@+id/btnSiguienteDogPerfil"
+        android:id="@+id/btnFinalizarDogPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/frameData"
         android:layout_marginLeft="240dp"
-        android:text="Siguiente"
+        android:text="finalizar"
         android:drawableLeft="@drawable/ic_next"/>
 
 </RelativeLayout>
