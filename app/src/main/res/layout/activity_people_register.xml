@@ -19,7 +19,7 @@
     <RelativeLayout
         android:id="@+id/retInfo"
         android:layout_width="300dp"
-        android:layout_height="220dp"
+        android:layout_height="265dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/txtRegitrar"
         android:layout_marginTop="50dp"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:hint="Nombre"
             android:inputType="textPersonName"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/edtLastName"
@@ -41,7 +41,7 @@
             android:layout_marginTop="10dp"
             android:hint="Apellido"
             android:inputType="textPersonName"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/edtEmail"
@@ -54,13 +54,24 @@
             android:textAlignment="center" />
 
         <EditText
+            android:id="@+id/edPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
             android:layout_below="@+id/edtEmail"
             android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:inputType="textWebPassword"/>
+            android:hint="Contraseña"
+            android:inputType="textWebPassword"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/edPasswordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edPassword"
+            android:layout_marginTop="10dp"
+            android:hint="Confirmar contraseña"
+            android:inputType="textWebPassword"
+            android:textAlignment="center" />
 
     </RelativeLayout>
 
@@ -69,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/retInfo"
+        android:layout_marginTop="50dp"
         android:background="@drawable/ic_dogacostadoo" />
 
     <Button
@@ -84,19 +96,11 @@
         android:id="@+id/btnVolver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="10dp"
         android:text="Volver"
         android:drawableLeft="@drawable/ic_back"
         android:layout_below="@+id/retInfo"/>
 
-    <Button
-        android:id="@+id/btnSiguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="270dp"
-        android:text="siguiente"
-        android:drawableLeft="@drawable/ic_next"
-        android:layout_below="@+id/retInfo"/>
+
 </RelativeLayout>
