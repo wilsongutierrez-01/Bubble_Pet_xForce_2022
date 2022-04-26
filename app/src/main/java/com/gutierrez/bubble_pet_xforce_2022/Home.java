@@ -20,5 +20,11 @@ public class Home extends AppCompatActivity {
             Intent perfil = new Intent(getApplicationContext(), PetProfile.class);
             startActivity(perfil);
         });
+
+        btn = findViewById(R.id.btnProfilePerson);
+        btn.setOnClickListener(v -> {
+           Intent person = new Intent(getApplicationContext(), PersonProfile.class);
+           startActivity(person);
+        });
     }
 }

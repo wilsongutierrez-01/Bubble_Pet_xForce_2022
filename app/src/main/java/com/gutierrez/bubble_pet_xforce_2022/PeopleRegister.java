@@ -51,20 +51,8 @@ String email, password, passwordConfirm, name, lastName;
 
        btn = findViewById(R.id.btnRegistrar);
         btn.setOnClickListener(v -> {
-            tempVal = findViewById(R.id.edtEmail);
-            email = tempVal.getText().toString();
 
-            tempVal = findViewById(R.id.edPassword);
-            password = tempVal.getText().toString();
-
-            tempVal = findViewById(R.id.edPasswordConfirm);
-            passwordConfirm = tempVal.getText().toString();
-
-            tempVal = findViewById(R.id.edtName);
-            name = tempVal.getText().toString();
-
-            tempVal = findViewById(R.id.edtLastName);
-            lastName = tempVal.getText().toString();
+            formData();
 
             if(!email.isEmpty() && !password.isEmpty() && !passwordConfirm.isEmpty() && !name.isEmpty() && !lastName.isEmpty()){
 
@@ -90,6 +78,23 @@ String email, password, passwordConfirm, name, lastName;
         });
 
 
+    }
+
+    private void formData(){
+        tempVal = findViewById(R.id.edtEmail);
+        email = tempVal.getText().toString();
+
+        tempVal = findViewById(R.id.edPassword);
+        password = tempVal.getText().toString();
+
+        tempVal = findViewById(R.id.edPasswordConfirm);
+        passwordConfirm = tempVal.getText().toString();
+
+        tempVal = findViewById(R.id.edtName);
+        name = tempVal.getText().toString();
+
+        tempVal = findViewById(R.id.edtLastName);
+        lastName = tempVal.getText().toString();
     }
 
     private void savePerson (){

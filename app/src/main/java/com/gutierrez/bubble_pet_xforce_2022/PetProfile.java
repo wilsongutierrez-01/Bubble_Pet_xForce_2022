@@ -3,7 +3,9 @@ package com.gutierrez.bubble_pet_xforce_2022;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class PetProfile extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabaseReference;
     TextView tempV;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,12 @@ public class PetProfile extends AppCompatActivity {
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         dataPet();
+
+        btn = findViewById(R.id.btnBack0);
+        btn.setOnClickListener(v -> {
+            Intent back = new Intent(getApplicationContext(), Home.class);
+            startActivity(back);
+        });
 
     }
     private void dataPet(){

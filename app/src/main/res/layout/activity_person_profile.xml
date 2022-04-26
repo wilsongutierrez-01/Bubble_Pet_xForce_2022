@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonProfile">
+
+    <TextView
+        android:id="@+id/lblNamePerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la persona"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+    <TextView
+        android:id="@+id/lblEmailPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Correo persona"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lblNamePerson"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/btnGetOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesion"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lblEmailPerson"
+        android:layout_marginTop="70dp"/>
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:layout_below="@+id/btnGetOut"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"/>
+</RelativeLayout>

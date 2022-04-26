@@ -14,4 +14,14 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
+
+    <Button
+        android:id="@+id/btnProfilePerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil Persona"
+        android:layout_below="@+id/btnProfilePet"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
 </RelativeLayout>

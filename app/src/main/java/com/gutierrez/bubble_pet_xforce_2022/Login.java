@@ -24,33 +24,26 @@ DatabaseReference mData;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
         buttonStyle();
-        try{
-            mAuth = FirebaseAuth.getInstance();
-            mData = FirebaseDatabase.getInstance().getReference();
-        }catch(Exception e){
-            MsgToast("" + e);
-        }
+
+        mAuth = FirebaseAuth.getInstance();
+        mData = FirebaseDatabase.getInstance().getReference();
 
 
         btn = findViewById(R.id.btnSingUp);
         btn.setOnClickListener(v->{
-            try {
-                Intent re = new Intent(getApplicationContext(), PeopleRegister.class);
-                startActivity(re);
-            }catch(Exception e){
-             MsgToast("" + e);
-            }
+
+            Intent re = new Intent(getApplicationContext(), PeopleRegister.class);
+            startActivity(re);
+
 
         });
 
         btn = findViewById(R.id.btnSingIn);
         btn.setOnClickListener(v->{
-            try {
-                Intent lo = new Intent(getApplicationContext(),PeopleLogin.class);
-                startActivity(lo);
-            }catch(Exception e){
-                MsgToast(e.getMessage());
-            }
+
+            Intent lo = new Intent(getApplicationContext(),PeopleLogin.class);
+            startActivity(lo);
+
 
         });
     }
