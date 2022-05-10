@@ -15,9 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="30dp"
+            android:paddingHorizontal="0dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.091"
             tools:layout_editor_absoluteX="0dp">
 
             <TextView
@@ -55,24 +56,23 @@
                     android:id="@+id/btnGetOut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="20sp"
-                    android:text="Cerrar sesion"
+                    android:layout_marginEnd="10dp"
                     android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
+                    android:paddingHorizontal="20sp"
+                    android:text="Cerrar sesion"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.916"
-                    app:layout_constraintStart_toEndOf="@+id/btnRegresar"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnRegresar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:paddingHorizontal="20sp"
+                    android:layout_marginStart="10dp"
                     android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
+                    android:paddingHorizontal="20sp"
                     android:text="Regresar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
