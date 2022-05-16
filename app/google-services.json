@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124597906092",
+    "project_id": "bubble-pet-xforce-2022",
+    "storage_bucket": "bubble-pet-xforce-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124597906092:android:44cbda17daa70fdd5d0d09",
+        "android_client_info": {
+          "package_name": "com.gutierrez.bubble_pet_xforce_2022"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124597906092-9a2edfg06t1jgm7l5m45a16kqobq0di8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAeN5prlzyj0It8VUN682OivC0JlUHX84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124597906092-9a2edfg06t1jgm7l5m45a16kqobq0di8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
