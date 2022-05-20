@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary">#9E9E9E</color>
+    <color name="primary">#C1C1C1</color>
     <color name="primary_dark">#616161</color>
     <color name="primary_light">#F5F5F5</color>
     <color name="accent">#FFEB3B</color>
@@ -17,5 +17,79 @@
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
     <color name="celeste">#2196F3</color>
+
+
+
+    <!--COLORES PRINCIPALES-->
+    <color name="gris00">#FBFBFB</color>
+    <color name="gris0">#F4F4F4</color>
+    <color name="gris1">#F1F1F1</color>
+    <color name="gris2">#D3D3D3</color>
+    <color name="gris3">#D5D5D5</color>
+    <color name="gris4">#BDBDBD</color>
+    <color name="gris5">#A1A1A1</color>
+    <color name="gris6">#8F8F8F</color>
+    <color name="gris7">#808080</color>
+    <color name="gris8">#656565</color>
+    <color name="gris9">#5E5E5E</color>
+    <color name="gris10">#555555</color>
+    <color name="gris11">#2E2E2E</color>
+    <color name="gris12">#262626</color>
+    <color name="rojo1">#FFEEEC</color>
+    <color name="rojo2">#FFE4E0</color>
+    <color name="rojo3">#FFDBD6</color>
+    <color name="rojo4">#FFD9D3</color>
+    <color name="rojo5">#FFC4BB</color>
+    <color name="rojo6">#FFA89B</color>
+    <color name="rojo7">#FF9484</color>
+    <color name="rojo8">#FF8978</color>
+    <color name="rojo9">#FF6953</color>
+    <color name="rojo10">#FF4C31</color>
+    <color name="rojo11">#FF3719</color>
+    <color name="rojo12">#FF2100</color>
+    <color name="rojo13">#E11D00</color>
+    <color name="rojo14">#C11900</color>
+    <color name="rojo15">#8C1200</color>
+    <color name="naranja1">#FFF6E9</color>
+    <color name="naranja2">#FFEED6</color>
+    <color name="naranja3">#FFE5C1</color>
+    <color name="naranja4">#FFDBA8</color>
+    <color name="naranja5">#FFD190</color>
+    <color name="naranja6">#FFC87A</color>
+    <color name="naranja7">#FFBF63</color>
+    <color name="naranja8">#FFB74F</color>
+    <color name="naranja9">#FFAD37</color>
+    <color name="naranja10">#FFA31F</color>
+    <color name="naranja11">#FF9600</color>
+    <color name="naranja12">#EA8A00</color>
+    <color name="naranja13">#CC7800</color>
+    <color name="naranja14">#AE6600</color>
+    <color name="naranja15">#885000</color>
+    <color name="amarillo1">#FFFCE6</color>
+    <color name="amarillo2">#FFF9C5</color>
+    <color name="amarillo3">#FFF6A3</color>
+    <color name="amarillo4">#FAEE86</color>
+    <color name="amarillo">#FFEB3B</color>
+    <color name="amarillo5">#FFE92C</color>
+    <color name="amarillo6">#FBE417</color>
+    <color name="amarillo7">#FFE500</color>
+    <color name="amarillo8">#E1CA00</color>
+    <color name="amarillo9">#BFAC00</color>
+    <color name="amarillo10">#9A8A00</color>
+    <color name="amarillo11">#786C00</color>
+    <color name="azul1">#DEF0FF</color>
+    <color name="azul2">#C5E5FF</color>
+    <color name="azul3">#B2DCFF</color>
+    <color name="azul4">#97D0FF</color>
+    <color name="azul5">#81C6FF</color>
+    <color name="azul6">#69BBFF</color>
+    <color name="azul7">#5DB5FF</color>
+    <color name="azul8">#4DADFF</color>
+    <color name="azul9">#31A0FF</color>
+    <color name="azul10">#1C96FF</color>
+    <color name="azul11">#0089FF</color>
+    <color name="azul12">#0072D5</color>
+    <color name="azul13">#0060B3</color>
+    <color name="azul14">#004B8C</color>
 
 </resources>
