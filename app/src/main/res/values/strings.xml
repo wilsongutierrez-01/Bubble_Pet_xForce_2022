@@ -11,6 +11,7 @@
     <drawable name="perrito3">@drawable/ic_dogacostadoo</drawable>
     <drawable name="corazones">@drawable/ic_corazones</drawable>
     <drawable name="imgPerfilPerson">@drawable/fondo</drawable>
+    <drawable name="imgPerfilPet">@drawable/fondopet</drawable>
 
     <!--TX PeopleLogin.xml-->
     <string name="login">Iniciar Sesión</string>
