@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class PeopleLogin extends AppCompatActivity {
 Button btn;
 FirebaseAuth mAuth;
-TextView tempV;
+TextView tempV, btnCreatCount;
 String email, password;
 
 
@@ -27,12 +27,6 @@ String email, password;
         setContentView(R.layout.activity_people_login);
 
         mAuth = FirebaseAuth.getInstance();
-
-        btn = findViewById(R.id.btnBack);
-        btn.setOnClickListener(v->{
-            Intent back = new Intent(getApplicationContext(), Login.class);
-            startActivity(back);
-        });
 
         btn = findViewById(R.id.btnLoginUser);
         btn.setOnClickListener(v -> {
@@ -45,8 +39,23 @@ String email, password;
             if(!email.isEmpty() && !password.isEmpty()){
                 login();
             }else{
-                MsgToast("Debe ingresar datos");
+                if(email.isEmpty() && !password.isEmpty()){
+                    MsgToast("Ingrese un correo electronico");
+                }else if (!email.isEmpty() && password.isEmpty()){
+                    MsgToast("Ingrese la contraseña");
+                }else {
+                    MsgToast("Rellene los campos");
+                }
             }
+
+        });
+
+        btnCreatCount = findViewById(R.id.btnSingupLogin);
+        btnCreatCount.setOnClickListener(v->{
+
+            Intent re = new Intent(getApplicationContext(), PeopleRegister.class);
+            startActivity(re);
+
 
         });
     }

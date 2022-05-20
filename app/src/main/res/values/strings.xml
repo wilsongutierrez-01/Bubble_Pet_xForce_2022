@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Bubble_Pet_xForce_2022</string>
+    <string name="app_name">BubblePet</string>
+
+    <!--TX GENERALES-->
+    <string name="correo">Correo</string>
+    <string name="contraseña">Contraseña</string>
+
+    <!--IMAGENES-->
+    <drawable name="perrito">@drawable/ic_dogpie</drawable>
+    <drawable name="perrito2">@drawable/ic_dog</drawable>
+    <drawable name="perrito3">@drawable/ic_dogacostadoo</drawable>
+    <drawable name="corazones">@drawable/ic_corazones</drawable>
+    <drawable name="prueba">@drawable/fondo</drawable>
+
+    <!--TX PeopleLogin.xml-->
+    <string name="login">Iniciar Sesión</string>
+    <string name="signup">Registrarse</string>
+    <string name="signupLoginTx">Aún no tienes una cuenta?</string>
+    <string name="signupLoginbtn">Crear una aquí</string>
+
+    <!--TX Home.xml-->
+    <string name="Pperson">Tu perfil</string>
+    <string name="Pmascota">Perfil de mascota</string>
+
 </resources>
