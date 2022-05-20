@@ -18,12 +18,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        btn = findViewById(R.id.btnProfilePet);
-        btn.setOnClickListener(v -> {
-            Intent perfil = new Intent(getApplicationContext(), PetProfile.class);
-            startActivity(perfil);
-        });
-
         btn = findViewById(R.id.btnProfilePerson);
         btn.setOnClickListener(v -> {
            Intent person = new Intent(getApplicationContext(), PersonProfile.class);
