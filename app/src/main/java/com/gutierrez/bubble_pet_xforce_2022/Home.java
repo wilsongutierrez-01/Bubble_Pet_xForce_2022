@@ -23,6 +23,7 @@ public class Home extends AppCompatActivity {
            Intent person = new Intent(getApplicationContext(), PersonProfile.class);
            startActivity(person);
         });
+
     }
 
     //Cuadro de texto para salir de la aplicacion

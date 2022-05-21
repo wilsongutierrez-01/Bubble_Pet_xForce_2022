@@ -21,6 +21,8 @@
 
 
     <!--COLORES PRINCIPALES-->
+
+    <color name="Transparente">#001C96FF</color>
     <color name="gris00">#FBFBFB</color>
     <color name="gris0">#F4F4F4</color>
     <color name="gris1">#F1F1F1</color>
@@ -50,6 +52,25 @@
     <color name="rojo13">#E11D00</color>
     <color name="rojo14">#C11900</color>
     <color name="rojo15">#8C1200</color>
+    <color name="rosado1">#FFF0FA</color>
+    <color name="rosado2">#FFE0F5</color>
+    <color name="rosado3">#FFD3F1</color>
+    <color name="rosado4">#FFC7ED</color>
+    <color name="rosado5">#FFABE4</color>
+    <color name="rosado6">#FF98DE</color>
+    <color name="rosado7">#FF7ED6</color>
+    <color name="rosado8">#FF67CF</color>
+    <color name="rosado9">#FF4FC7</color>
+    <color name="rosado10">#FF21B8</color>
+    <color name="rosado10Transparente05">#0DFF21B8</color>
+    <color name="rosado10Transparente10">#1AFF21B8</color>
+    <color name="rosado10Transparente15">#26FF21B8</color>
+    <color name="rosado10Transparente20">#33FF21B8</color>
+    <color name="rosado10Transparente25">#40FF21B8</color>
+    <color name="rosado10Transparente50">#80FF21B8</color>
+    <color name="rosado10Transparente75">#BFFF21B8</color>
+    <color name="rosado11">#D60092</color>
+    <color name="rosado12">#980068</color>
     <color name="naranja1">#FFF6E9</color>
     <color name="naranja2">#FFEED6</color>
     <color name="naranja3">#FFE5C1</color>
@@ -87,6 +108,9 @@
     <color name="azul8">#4DADFF</color>
     <color name="azul9">#31A0FF</color>
     <color name="azul10">#1C96FF</color>
+    <color name="azul10Transparente25">#401C96FF</color>
+    <color name="azul10Transparente50">#801C96FF</color>
+    <color name="azul10Transparente75">#BF1C96FF</color>
     <color name="azul11">#0089FF</color>
     <color name="azul12">#0072D5</color>
     <color name="azul13">#0060B3</color>
