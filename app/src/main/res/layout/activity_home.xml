@@ -47,7 +47,8 @@
                                 android:background="@color/gris0"
                                 android:rotation="0"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/imgPerfilPerson" />
+                                android:src="@drawable/imgPerfilPerson"
+                                android:contentDescription="@string/descriptionImg" />
                         </androidx.cardview.widget.CardView>
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -60,7 +61,7 @@
                     android:paddingTop="30dp">
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/userName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/txUserName"
@@ -70,14 +71,14 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/userMail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/txUserMail"
                         android:textAlignment="textStart"
                         android:textColor="@color/gris5"
-                        android:textSize="7pt"
-                        android:textStyle="bold" />
+                        android:textSize="7.5pt"
+                        tools:ignore="TextContrastCheck,TextContrastCheck" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -90,10 +91,12 @@
                             android:layout_marginEnd="16dp"
                             android:backgroundTint="@color/azul10"
                             android:text="@string/btEditProfile"
+                            android:textColor="@color/white"
                             android:textSize="5pt"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="TextContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -108,35 +111,193 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/gradiante_redondo_rtb1">
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
-                    <androidx.cardview.widget.CardView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/gradiante_redondo_rtb1"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/imageView"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/imgPerfilPet" />
-                    </androidx.cardview.widget.CardView>
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gradiante_redondo_rtb1"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="0dp"
+                            android:paddingTop="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="50dp">
 
 
-                </LinearLayout>
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                                    <ImageView
+                                        android:id="@+id/imageView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:background="@color/gris1"
+                                        android:src="@drawable/imgPerfilPet"
+                                        android:contentDescription="@string/descriptionImg"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/rosado10Transparente10"
+                                        android:elevation="1dp"
+                                        android:orientation="vertical"
+                                        android:paddingStart="20dp"
+                                        android:paddingTop="20dp"
+                                        tools:ignore="RtlSymmetry">
+
+                                        <TextView
+                                            android:id="@+id/textView3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/nombrePet"
+                                            android:textAlignment="textStart"
+                                            android:textColor="@color/black"
+                                            android:textSize="7pt"
+                                            android:textStyle="bold"
+                                            android:padding="10dp"
+                                            android:background="@drawable/esquinas_redondeadas"/>
+                                    </LinearLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:paddingHorizontal="30dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nombre"
+                                    android:textSize="7pt"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:padding="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/edad"
+                                    android:textSize="7pt"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:padding="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/color"
+                                    android:textSize="7pt"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:padding="10dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/raza"
+                                    android:textSize="7pt"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:padding="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/salud"
+                                    android:textSize="7pt"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:padding="10dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/homeNamePet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="@string/nombrePet"
+                                    android:textColor="@color/gris5"
+                                    android:textSize="7pt"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/homeEdadPet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="@string/edad"
+                                    android:textColor="@color/gris5"
+                                    android:textSize="7pt"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/homeColorPet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="@string/color"
+                                    android:textColor="@color/gris5"
+                                    android:textSize="7pt"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/homeRazaPet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="@string/raza"
+                                    android:textColor="@color/gris5"
+                                    android:textSize="7pt"
+                                    tools:ignore="TextContrastCheck" />
+
+                                <TextView
+                                    android:id="@+id/homeSaludPet"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="@string/salud"
+                                    android:textColor="@color/gris5"
+                                    android:textSize="7pt"
+                                    tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
 
             </LinearLayout>
 
