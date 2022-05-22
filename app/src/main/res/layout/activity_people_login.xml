@@ -8,6 +8,12 @@
     android:background="@color/gris00"
     tools:context=".PeopleLogin">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </ScrollView>
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
@@ -50,7 +56,7 @@
                 android:elevation="10dp"
                 android:orientation="vertical"
                 android:paddingHorizontal="30dp"
-                android:paddingVertical="20dp"
+                android:paddingVertical="100dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
