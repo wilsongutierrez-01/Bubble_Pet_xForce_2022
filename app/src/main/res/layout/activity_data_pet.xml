@@ -4,85 +4,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eeeeee"
+    android:background="@color/colorBackgroundMain"
     tools:context=".Data_Pet">
 
-    <RelativeLayout
-        android:id="@+id/frameData"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/txtNamePet"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre de Mascota"
-            android:textAlignment="center" />
+            android:orientation="vertical"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="50dp"
+            tools:ignore="MissingConstraints">
 
-        <EditText
-            android:id="@+id/txtAge"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/frameData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/txtNamePet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre de Mascota"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtNamePet"
+                        android:layout_marginTop="10dp"
+                        android:hint="Edad"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtAge"
+                        android:layout_marginTop="10dp"
+                        android:hint="Color"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtRaza"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtColor"
+                        android:layout_marginTop="10dp"
+                        android:hint="Raza"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtSalud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtRaza"
+                        android:layout_marginTop="10dp"
+                        android:hint="Estado de Salud"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtCel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtSalud"
+                        android:layout_marginTop="10dp"
+                        android:hint="Numero del dueño"
+                        android:textAlignment="center" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Edad"
-            android:textAlignment="center"
-            android:layout_below="@+id/txtNamePet"
-            android:layout_marginTop="10dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/txtColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Color"
-            android:textAlignment="center"
-            android:layout_below="@+id/txtAge"
-            android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/txtRaza"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Raza"
-            android:textAlignment="center"
-            android:layout_below="@+id/txtColor"
-            android:layout_marginTop="10dp"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="30dp">
 
-        <EditText
-            android:id="@+id/txtSalud"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Estado de Salud"
-            android:textAlignment="center"
-            android:layout_below="@+id/txtRaza"
-            android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:id="@+id/btnVolverDogPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="52dp"
+                        android:background="@color/gris5"
+                        android:fontFamily="@string/fontMain"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:text="Anterior"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/txtCel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Numero del dueño"
-            android:textAlignment="center"
-            android:layout_below="@+id/txtSalud"
-            android:layout_marginTop="10dp"/>
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="56dp"
+                        android:background="@color/azul10"
+                        android:fontFamily="@string/fontMain"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:text="Crear Perfil"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnVolverDogPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/frameData"
-        android:layout_marginLeft="40dp"
-        android:text="Anterior"
-        android:drawableLeft="@drawable/ic_back"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/btnFinalizarDogPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/frameData"
-        android:layout_marginLeft="240dp"
-        android:text="finalizar"
-        android:drawableLeft="@drawable/ic_next"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

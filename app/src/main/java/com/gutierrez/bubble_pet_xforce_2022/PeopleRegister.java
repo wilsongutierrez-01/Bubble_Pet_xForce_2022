@@ -70,7 +70,7 @@ String email, password, passwordConfirm, name, lastName, urlPhoto;
             startActivity(ok);
         });
 
-       btn = findViewById(R.id.btnRegistrar);
+        btn = findViewById(R.id.btnRegistrar);
         btn.setOnClickListener(v -> {
 
 

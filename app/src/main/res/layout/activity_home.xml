@@ -67,7 +67,7 @@
                         android:text="@string/txUserName"
                         android:textAlignment="textStart"
                         android:textColor="@color/black"
-                        android:textSize="9pt"
+                        android:textSize="21sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -77,26 +77,46 @@
                         android:text="@string/txUserMail"
                         android:textAlignment="textStart"
                         android:textColor="@color/gris5"
-                        android:textSize="7.5pt"
+                        android:textSize="17sp"
                         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <Button
+                        <TextView
+                            android:id="@+id/publicarNewPost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="5dp"
+                            android:text="Publicar"
+                            android:background="@color/azul10"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/sizeTextMain"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnProfilePerson"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
                             android:id="@+id/btnProfilePerson"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="16dp"
-                            android:backgroundTint="@color/azul10"
-                            android:text="@string/btEditProfile"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="5dp"
+                            android:text="Editar Perfil"
+                            android:background="@color/azul10"
                             android:textColor="@color/white"
-                            android:textSize="5pt"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="@dimen/sizeTextMain"
+                            android:layout_marginRight="20dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             tools:ignore="TextContrastCheck" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </LinearLayout>
@@ -167,7 +187,8 @@
                                             android:text="@string/nombrePet"
                                             android:textAlignment="textStart"
                                             android:textColor="@color/black"
-                                            android:textSize="7pt"
+                                            android:textSize="@dimen/sizeTextMain"
+                                            android:fontFamily="@string/fontMain"
                                             android:textStyle="bold"
                                             android:padding="10dp"
                                             android:background="@drawable/esquinas_redondeadas"/>
@@ -194,36 +215,40 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/nombre"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
                                     android:textColor="@color/black"
                                     android:textStyle="bold"
+                                    android:fontFamily="@string/fontMain"
                                     android:padding="10dp"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/edad"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
                                     android:textColor="@color/black"
                                     android:textStyle="bold"
+                                    android:fontFamily="@string/fontMain"
                                     android:padding="10dp"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/color"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
                                     android:textColor="@color/black"
                                     android:textStyle="bold"
+                                    android:fontFamily="@string/fontMain"
                                     android:padding="10dp"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/raza"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
                                     android:textColor="@color/black"
                                     android:textStyle="bold"
+                                    android:fontFamily="@string/fontMain"
                                     android:padding="10dp"/>
 
                                 <TextView
@@ -231,9 +256,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/salud"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
                                     android:textColor="@color/black"
                                     android:textStyle="bold"
+                                    android:fontFamily="@string/fontMain"
                                     android:padding="10dp"/>
                             </LinearLayout>
 
@@ -249,7 +275,8 @@
                                     android:padding="10dp"
                                     android:text="@string/nombrePet"
                                     android:textColor="@color/gris5"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
+                                    android:fontFamily="@string/fontMain"
                                     tools:ignore="TextContrastCheck" />
 
                                 <TextView
@@ -259,7 +286,8 @@
                                     android:padding="10dp"
                                     android:text="@string/edad"
                                     android:textColor="@color/gris5"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
+                                    android:fontFamily="@string/fontMain"
                                     tools:ignore="TextContrastCheck" />
 
                                 <TextView
@@ -269,7 +297,8 @@
                                     android:padding="10dp"
                                     android:text="@string/color"
                                     android:textColor="@color/gris5"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
+                                    android:fontFamily="@string/fontMain"
                                     tools:ignore="TextContrastCheck" />
 
                                 <TextView
@@ -279,7 +308,8 @@
                                     android:padding="10dp"
                                     android:text="@string/raza"
                                     android:textColor="@color/gris5"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
+                                    android:fontFamily="@string/fontMain"
                                     tools:ignore="TextContrastCheck" />
 
                                 <TextView
@@ -289,7 +319,8 @@
                                     android:padding="10dp"
                                     android:text="@string/salud"
                                     android:textColor="@color/gris5"
-                                    android:textSize="7pt"
+                                    android:textSize="@dimen/sizeTextMain"
+                                    android:fontFamily="@string/fontMain"
                                     tools:ignore="TextContrastCheck,TextContrastCheck" />
 
                             </LinearLayout>
