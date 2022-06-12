@@ -28,7 +28,8 @@ public class PersonProfile extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabaseReference;
     TextView tempV;
-    String nameMascota, edadMascota, colorMascota, razaMascota, saludMascota, celPerson;
+    String nameMascota, edadMascota, colorMascota, razaMascota, saludMascota, celPerson,
+            nameUser, lastNameUser, emailUser, urlPhotoPet, urlPhotoPer, userPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +44,19 @@ public class PersonProfile extends AppCompatActivity {
         dataPet();
 
         //Cerramos la sesion
-        btn = findViewById(R.id.btnGetOut);
-        btn.setOnClickListener(v -> {
+        tempV = findViewById(R.id.btnGetOut);
+        tempV.setOnClickListener(v -> {
             mAuth.signOut();
             Intent login = new Intent(getApplicationContext(), Login.class);
             startActivity(login);
         });
 
         //Actualizamos los datos
-        btn = findViewById(R.id.btnActualizar);
-        btn.setOnClickListener(v -> {
+        tempV = findViewById(R.id.btnActualizar);
+        tempV.setOnClickListener(v -> {
             getFormData();
-            update();
+            updatePet();
+            updateUser();
         });
 
     }
@@ -69,13 +71,24 @@ public class PersonProfile extends AppCompatActivity {
                 if (snapshot.exists()) {
 
                     String name = Objects.requireNonNull(snapshot.child("name").getValue()).toString();
+                    tempV = findViewById(R.id.homeNamePerson1);
+                    tempV.setText( name );
+
                     String lastName = Objects.requireNonNull(snapshot.child("lastName").getValue()).toString();
-                    tempV = findViewById(R.id.homeNamePerson);
-                    tempV.setText(name + " " + lastName);
+                    tempV = findViewById(R.id.homeLastNamePerson1);
+                    tempV.setText( lastName );
+
+                    String celular = Objects.requireNonNull(snapshot.child("celPhone").getValue()).toString();
+                    tempV = findViewById(R.id.homeCelular1);
+                    tempV.setText(celular);
 
                     String email = Objects.requireNonNull(snapshot.child("email").getValue()).toString();
-                    tempV = findViewById(R.id.homeEmailPerson);
+                    tempV = findViewById(R.id.homeEmailPerson1);
                     tempV.setText(email);
+
+                    userPass = Objects.requireNonNull(snapshot.child("password").getValue()).toString();
+
+                    urlPhotoPer = Objects.requireNonNull(snapshot.child("urlPhoto").getValue()).toString();
                 }else{
                     MsgToast("Null Reference");
                 }
@@ -99,28 +112,27 @@ public class PersonProfile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     String namePet = Objects.requireNonNull(snapshot.child("namePet").getValue()).toString();
-                    tempV = findViewById(R.id.homeNamePet);
+                    tempV = findViewById(R.id.homeNamePet1);
                     tempV.setText(namePet);
 
                     String agePet = Objects.requireNonNull(snapshot.child("agePet").getValue()).toString();
-                    tempV = findViewById(R.id.homeEdadPet);
+                    tempV = findViewById(R.id.homeEdadPet1);
                     tempV.setText(agePet);
 
                     String colorPet = Objects.requireNonNull(snapshot.child("colorPet").getValue()).toString();
-                    tempV = findViewById(R.id.homeColorPet);
+                    tempV = findViewById(R.id.homeColorPet1);
                     tempV.setText(colorPet);
 
                     String razaPet = Objects.requireNonNull(snapshot.child("razaPet").getValue()).toString();
-                    tempV = findViewById(R.id.homeRazaPet);
+                    tempV = findViewById(R.id.homeRazaPet1);
                     tempV.setText(razaPet);
 
                     String saludPet = Objects.requireNonNull(snapshot.child("saludPet").getValue()).toString();
-                    tempV = findViewById(R.id.homeSaludPet);
+                    tempV = findViewById(R.id.homeSaludPet1);
                     tempV.setText(saludPet);
 
-                    String celPerson = Objects.requireNonNull(snapshot.child("celPerson").getValue()).toString();
-                    tempV = findViewById(R.id.homeCelular);
-                    tempV.setText(celPerson);
+
+                    urlPhotoPet = Objects.requireNonNull(snapshot.child("urlPhotoPet").getValue()).toString();
 
                 }else{
                     MsgToast("No References");
@@ -136,7 +148,7 @@ public class PersonProfile extends AppCompatActivity {
     }
 
     //OBTENEMOS LOS DATOS ACTUALES PARA CAMBIARLOS Y GUARDARLOS
-    private void update(){
+    private void updatePet(){
         String id = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
         Map<String, Object> dataPet = new HashMap<>();
         dataPet.put("namePet", nameMascota);
@@ -144,7 +156,8 @@ public class PersonProfile extends AppCompatActivity {
         dataPet.put("colorPet", colorMascota);
         dataPet.put("razaPet", razaMascota);
         dataPet.put("saludPet", saludMascota);
-        dataPet.put("celPerson", celPerson);
+        dataPet.put("urlPhotoPet", urlPhotoPet);
+       // dataPet.put("celPerson", celPerson);
 
         mDatabaseReference.child("dataPet").child(id).setValue(dataPet).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -159,26 +172,59 @@ public class PersonProfile extends AppCompatActivity {
 
         });
     }
+    //Update User information
+    private void updateUser (){
+        String id = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+        Map<String, Object> dataUser = new HashMap<>();
+        dataUser.put("name", nameUser);
+        dataUser.put("lastName", lastNameUser);
+        dataUser.put("email", emailUser);
+        dataUser.put("celPhone", celPerson);
+        dataUser.put("urlPhoto", urlPhotoPer);
+        dataUser.put("password", userPass);
+
+        mDatabaseReference.child("Users").child(id).setValue(dataUser).addOnCompleteListener(new OnCompleteListener<Void>(){
+
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    MsgToast("satisfactoriamente");
+
+                    Intent home = new Intent(getApplicationContext(), Home.class);
+                    startActivity(home);
+                }
+            }
+        });
+    }
 
     //OBTENEMOS LOS DATOS DEL FORMULARIO
     private void getFormData(){
-        tempV = findViewById(R.id.homeNamePet);
+        tempV = findViewById(R.id.homeNamePet1);
         nameMascota = tempV.getText().toString();
 
-        tempV = findViewById(R.id.homeEdadPet);
+        tempV = findViewById(R.id.homeEdadPet1);
         edadMascota = tempV.getText().toString();
 
-        tempV = findViewById(R.id.homeColorPet);
+        tempV = findViewById(R.id.homeColorPet1);
         colorMascota = tempV.getText().toString();
 
-        tempV = findViewById(R.id.homeRazaPet);
+        tempV = findViewById(R.id.homeRazaPet1);
         razaMascota = tempV.getText().toString();
 
-        tempV = findViewById(R.id.homeSaludPet);
+        tempV = findViewById(R.id.homeSaludPet1);
         saludMascota = tempV.getText().toString();
 
-        tempV = findViewById(R.id.homeCelular);
+        tempV = findViewById(R.id.homeCelular1);
         celPerson = tempV.getText().toString();
+
+        tempV = findViewById(R.id.homeNamePerson1);
+        nameUser = tempV.getText().toString();
+
+        tempV = findViewById(R.id.homeLastNamePerson1);
+        lastNameUser = tempV.getText().toString();
+
+        tempV = findViewById(R.id.homeEmailPerson1);
+        emailUser = tempV.getText().toString();
     }
 
     //PERMITE GENERAR MENSATE TOAST

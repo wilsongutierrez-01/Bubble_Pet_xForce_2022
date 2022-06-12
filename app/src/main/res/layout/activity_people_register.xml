@@ -39,10 +39,10 @@
     <RelativeLayout
         android:id="@+id/retInfo"
         android:layout_width="300dp"
-        android:layout_height="265dp"
+        android:layout_height="320dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/txtRegitrar"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:background="#e0e0e0">
 
         <EditText
@@ -64,10 +64,19 @@
             android:textAlignment="center" />
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/txtCel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edtLastName"
+            android:layout_marginTop="10dp"
+            android:hint="Numero del dueño"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCel"
             android:layout_marginTop="10dp"
             android:hint="Correo"
             android:inputType="textEmailAddress"

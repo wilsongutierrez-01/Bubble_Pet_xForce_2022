@@ -42,13 +42,7 @@ public class PetProfile extends AppCompatActivity {
             Intent back = new Intent(getApplicationContext(), Home.class);
             startActivity(back);
         });
-        
-        btn = findViewById(R.id.btnActualizar);
-        btn.setOnClickListener(v -> {
-            getFormData();
 
-            update();
-        });
 
     }
     private void dataPet(){
@@ -78,9 +72,6 @@ public class PetProfile extends AppCompatActivity {
                     tempV = findViewById(R.id.txtSalud0);
                     tempV.setText(saludPet);
 
-                    String celPerson = snapshot.child("celPerson").getValue().toString();
-                    tempV = findViewById(R.id.txtCel0);
-                    tempV.setText(celPerson);
 
                 }else{
                     MsgToast("No References");
@@ -134,9 +125,6 @@ public class PetProfile extends AppCompatActivity {
 
         tempV = findViewById(R.id.txtSalud0);
         saludMascota = tempV.getText().toString();
-
-        tempV = findViewById(R.id.txtCel0);
-        celPerson = tempV.getText().toString();
     }
     private void MsgToast(String message) {
         Toast.makeText(getApplicationContext(),message, Toast.LENGTH_LONG).show();

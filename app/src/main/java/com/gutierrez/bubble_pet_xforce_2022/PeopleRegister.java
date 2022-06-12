@@ -45,7 +45,7 @@ Intent tomarFotoIntent;
 ImageView imgFotoP;
 FirebaseAuth mAuth;
 DatabaseReference mData;
-String email, password, passwordConfirm, name, lastName, urlPhoto;
+String celPhone,email, password, passwordConfirm, name, lastName, urlPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,39 +70,42 @@ String email, password, passwordConfirm, name, lastName, urlPhoto;
             startActivity(ok);
         });
 
-        btn = findViewById(R.id.btnRegistrar);
-        btn.setOnClickListener(v -> {
+        try {
+            btn = findViewById(R.id.btnRegistrar);
+            btn.setOnClickListener(v -> {
 
+                formData();
 
-            formData();
+                if(!email.isEmpty() && !password.isEmpty() && !passwordConfirm.isEmpty() && !name.isEmpty() && !lastName.isEmpty()){
 
-            if(!email.isEmpty() && !password.isEmpty() && !passwordConfirm.isEmpty() && !name.isEmpty() && !lastName.isEmpty()){
+                    if(password.equals(passwordConfirm)){
+                        try{
+                            savePerson();
+                        }catch(Exception r){
+                            MsgToast(r.getMessage());
+                        }
+                        //ResgitrarMascota();
 
-                if(password.equals(passwordConfirm)){
-                    try{
-                        savePerson();
-                    }catch(Exception r){
-                        MsgToast(r.getMessage());
+                    }else{
+                        MsgToast("Las contraseñas no coinciden");
                     }
 
-
                 }else{
-                    MsgToast("Las contraseñas no coinciden");
+                    MsgToast("Relle todos los campos");
                 }
+            });
 
-
-
-            }else{
-                MsgToast("Relle todos los campos");
-            }
-
-
-        });
+        }catch (Exception e){
+            MsgToast(e.getMessage());
+        }
 
 
     }
 
     private void formData(){
+        tempVal = findViewById(R.id.txtCel);
+        celPhone = tempVal.getText().toString();
+
         tempVal = findViewById(R.id.edtEmail);
         email = tempVal.getText().toString();
 
@@ -120,21 +123,6 @@ String email, password, passwordConfirm, name, lastName, urlPhoto;
     }
 
     private void savePerson (){
-        //Obtener los datos desde los TextView
-        /*tempVal = findViewById(R.id.edtEmail);
-        String email = tempVal.getText().toString();
-
-        tempVal = findViewById(R.id.edPassword);
-        String password = tempVal.getText().toString();
-
-        tempVal = findViewById(R.id.edPasswordConfirm);
-        String passwordConfirm = tempVal.getText().toString();
-
-        tempVal = findViewById(R.id.edtName);
-        String name = tempVal.getText().toString();
-
-        tempVal = findViewById(R.id.edtLastName);
-        String lastName = tempVal.getText().toString();*/
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -142,6 +130,7 @@ String email, password, passwordConfirm, name, lastName, urlPhoto;
                 if (task.isSuccessful()){
 
                             Map<String, Object> data = new HashMap<>();
+                            data.put("celPhone",celPhone);
                             data.put("email", email);
                             data.put("password", password);
                             data.put("name", name);
@@ -155,7 +144,9 @@ String email, password, passwordConfirm, name, lastName, urlPhoto;
                                     finish();
                                     MsgToast("Usuario creado con exito");
 
+
                                 }
+
                             });
                             ResgitrarMascota();
 

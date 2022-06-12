@@ -6,9 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".PetProfile">
 
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gris0"
+        android:rotation="0"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgPerfilPerson"
+        android:contentDescription="@string/descriptionImg" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -131,19 +143,6 @@
                     android:layout_height="70dp"
                     android:orientation="horizontal">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/lblCel"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Cel Dueño:"
-                            android:textSize="20dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
             </LinearLayout>
@@ -264,28 +263,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <EditText
-                            android:id="@+id/txtCel0"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Numero del dueño"
-                            android:textAlignment="center"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:layout_editor_absoluteX="224dp" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </LinearLayout>
-
             </LinearLayout>
 
         </LinearLayout>
@@ -302,17 +279,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="30dp">
-
-                <Button
-                    android:id="@+id/btnActualizar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:paddingHorizontal="20sp"
-                    android:text="Actualizar"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnBack0"
