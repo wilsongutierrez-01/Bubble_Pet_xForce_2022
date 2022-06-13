@@ -59,6 +59,19 @@ public class PersonProfile extends AppCompatActivity {
             updateUser();
         });
 
+        //Pet Profile
+        tempV = findViewById(R.id.petProfile);
+        tempV.setOnClickListener(v -> {
+            Intent pet = new Intent(getApplicationContext(), PetProfile.class);
+            startActivity(pet);
+        });
+
+        //Delete pet profile
+        tempV = findViewById(R.id.borrarPerfil);
+        tempV.setOnClickListener(v -> {
+            deletePet();
+        });
+
     }
 
     //OBTENEMOS LA INFORMACION DEL USUARIO (NOMBRE, CORREO)
@@ -227,6 +240,21 @@ public class PersonProfile extends AppCompatActivity {
         emailUser = tempV.getText().toString();
     }
 
+    private void deletePet (){
+        String id = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
+
+        mDatabaseReference.child("dataPet").child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    MsgToast("Por favor ingrese una nueva mascota");
+
+                    Intent newPet = new Intent(getApplicationContext(), Data_Pet.class);
+                    startActivity(newPet);
+                }
+            }
+        });
+    }
     //PERMITE GENERAR MENSATE TOAST
     private void MsgToast(String message) {
         Toast.makeText(getApplicationContext(),message, Toast.LENGTH_LONG).show();

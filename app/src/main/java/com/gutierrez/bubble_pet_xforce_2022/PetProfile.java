@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -71,6 +73,10 @@ public class PetProfile extends AppCompatActivity {
                     String saludPet = snapshot.child("saludPet").getValue().toString();
                     tempV = findViewById(R.id.txtSalud0);
                     tempV.setText(saludPet);
+
+                    String urlImg = snapshot.child("urlPhotoPet").getValue().toString();
+                    ImageView imgPet = findViewById(R.id.imgPhotoPet1);
+                    Glide.with(getApplicationContext()).load(urlImg).into(imgPet);
 
 
                 }else{
